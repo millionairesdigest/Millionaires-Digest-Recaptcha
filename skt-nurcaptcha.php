@@ -117,7 +117,7 @@ function skt_nurc_settings_link($links) {
 	return $links;
 }
 function skt_nurc_admin_page() {
-	$hook_suffix = add_options_page("Skt NURCaptcha", "Skt NURCaptcha", 'manage_options', "skt_nurcaptcha", "skt_nurc_admin");
+	$hook_suffix = add_options_page("reCAPTCHA", "reCAPTCHA", 'manage_options', "skt_nurcaptcha", "skt_nurc_admin");
 	add_action( "admin_print_scripts-".$hook_suffix, 'skt_nurc_admin_init' );
 }
 
@@ -213,11 +213,11 @@ function nurCaptchaMU_preprocess() {
 function skt_nurc_setup_alert() {
 	
 	?><div id="setup_alert" class="updated"><p><strong><?php 
-	_e('Skt NURCaptcha Warning', 'skt-nurcaptcha' );
+	_e('reCAPTCHA Warning', 'skt-nurcaptcha' );
 	?></strong><br /><?php
-	_e('You must register your reCAPTCHA keys to have Skt NURCaptcha protection enabled.', 'skt-nurcaptcha' );
-	if (get_admin_page_title() != 'Skt NURCaptcha') {
-		echo '<br />'.__('Go to', 'skt-nurcaptcha')." <a href='options-general.php?page=skt_nurcaptcha'>".__('Skt NURCaptcha Settings', 'skt-nurcaptcha')."</a> ". __( 'and save your keys to the appropriate fields', 'skt-nurcaptcha' );
+	_e('You must register your reCAPTCHA keys to have protection enabled.', 'skt-nurcaptcha' );
+	if (get_admin_page_title() != 'reCAPTCHA') {
+		echo '<br />'.__('Go to', 'skt-nurcaptcha')." <a href='options-general.php?page=skt_nurcaptcha'>".__('reCAPTCHA Settings', 'skt-nurcaptcha')."</a> ". __( 'and save your keys to the appropriate fields', 'skt-nurcaptcha' );
 	} else {
 		echo '<br />'. __( 'Be sure your keys are saved to the appropriate fields down here', 'skt-nurcaptcha' );
 	}
