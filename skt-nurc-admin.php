@@ -205,9 +205,8 @@
 ?>
 <div class="wrap">
 	<?php 	
-		$nurc_version = nurc_get_version();
 		$nurc_icon = plugin_dir_url(dirname(__FILE__).'/skt-nurcaptcha.php')."img/icon.svg";
-		echo "<div style=\"margin-left:24px;\"><h2><img src=\"$nurc_icon\" height=\"42\" width=\"42\" style=\"margin-right:4px;\" >" . __( 'reCAPTCHA Settings', 'skt-nurcaptcha' ) . "</h2></div>"; 
+		echo "<div style=\"margin-left:24px;\"><h2>" . __( 'reCAPTCHA Settings', 'skt-nurcaptcha' ) . "</h2></div>"; 
 	?>
 	
 	<div style="width:680px;padding:12px 0 12px 24px">
@@ -215,7 +214,6 @@
 				<input type="hidden" name="sktnurc_hidden" value="Y" />
 				<input id="log_clear" type="hidden" name="log_clear" value="no" />
 				<input id="confirm_dialog" type="hidden" name="confirm_dialog" value="<?php _e( 'This option cannot be undone. Do you really want to erase all Log Data and restart Log File?', 'skt-nurcaptcha' ) ?>" />
-		<?php echo __('Version: ', 'skt-nurcaptcha') . $nurc_version; ?>
 		<p style="padding: .5em; background-color: #666666; color: #fff;position:relative">Skt NURCaptcha 
 		<?php   $total = skt_nurc_countlog();
 			if ($total) {
@@ -673,27 +671,6 @@ type="text" id ="image_alt_text" name="image_alt_text" value="<?php echo $sktnur
 		</p>
 	</div>
 	</form>
-
-<?php
-
-/********************* PayPal Donation Button */
-			
-?>
-	<div style="position:relative;width:680px;padding:8px 0 12px 24px">
-		<p style="padding: .6em; background-color: #666; color: #fff;">
-				<?php echo __( 'Make me happy:', 'skt-nurcaptcha' ) ?>
-				</p>
-		<div style="margin-left:32px;padding-bottom:12px">
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="SKNS7K7L5BFLL">
-				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-				<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
-			</form>
-		</div>
-	</div>
-	
-</div>	<?php /* end of div.wrap */ ?>
 
 <?php
 
