@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 	// populate new version's data 
 	if(get_site_option('sktnurc_recaptcha_version')==""){
@@ -207,7 +207,7 @@
 	<?php 	
 		$nurc_version = nurc_get_version();
 		$nurc_icon = plugin_dir_url(dirname(__FILE__).'/skt-nurcaptcha.php')."img/icon.svg";
-		echo "<div style=\"margin-left:24px;\"><h2><img src=\"$nurc_icon\" height=\"42\" width=\"42\" style=\"margin-right:4px;\" >" . __( 'Skt NURCaptcha Settings', 'skt-nurcaptcha' ) . "</h2></div>"; 
+		echo "<div style=\"margin-left:24px;\"><h2><img src=\"$nurc_icon\" height=\"42\" width=\"42\" style=\"margin-right:4px;\" >" . __( 'reCAPTCHA Settings', 'skt-nurcaptcha' ) . "</h2></div>"; 
 	?>
 	
 	<div style="width:680px;padding:12px 0 12px 24px">
